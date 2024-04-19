@@ -136,6 +136,8 @@ Adds a decimal column, with **optional precision (defaults to 8)** and **scale (
 
 Specifying `null` as precision creates a decimal column that can store numbers of precision and scale. (Only supported for Oracle, SQLite, Postgres)
 
+:::note decimal column values are returned as a string in query results (MySQL). :::
+
 ```ts
 this.schema.createTable('products', (table) => {
   table.decimal('price')
